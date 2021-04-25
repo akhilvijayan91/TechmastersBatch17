@@ -1,5 +1,6 @@
 package selbasics;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -12,7 +13,8 @@ import java.io.IOException;
 
 public class Screenshotpgm {
     public static void main(String[] args) throws InterruptedException, IOException {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\asivan\\chromedriver_win32\\chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
+       // System.setProperty("webdriver.chrome.driver", "C:\\Users\\asivan\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("http://automationpractice.com/index.php");
         driver.manage().window().maximize();
