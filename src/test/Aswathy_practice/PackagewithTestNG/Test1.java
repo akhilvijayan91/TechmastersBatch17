@@ -28,4 +28,15 @@ public class Test1 {
     {
         System.out.println("after method");
     }
+    @BeforeClass
+    public void  beforeclass()
+    {
+        System.out.println("before class");
+    }
+    @AfterClass
+    public void  afterClass()
+    {
+        System.out.println("after class");
+    }
+
 }
